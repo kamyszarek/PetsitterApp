@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security" xmlns:name="http://www.w3.org/1999/xhtml">
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  background-image:linear-gradient(to right bottom, #e4a7db, #d245db, #a22dce, #7d3ac5, #4d56bd);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topnav {
+  height: 30px;
+  font-size: 26px;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+.klasa {
+    font-weight: bold;
+    font-size:20px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+</style>
+</head>
+<body>
+
+
+
+<center>
+
+    <form th:action="@{/Logging}" method="post">
+
+        <label class="centered" >Twoje konto jest aktywne. Możesz się zalogować.</label><br>
+        <input class="button" type="submit" value="Zaloguj"><br>
+
+    </form> <br><br>
+
+</center>
+
+
+</body>
+</html>

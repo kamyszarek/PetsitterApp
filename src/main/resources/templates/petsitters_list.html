@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security" xmlns:name="http://www.w3.org/1999/xhtml">
+<html>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  background-image:linear-gradient(to right bottom, #e4a7db, #d245db, #a22dce, #7d3ac5, #4d56bd);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.label, .citieslist {
+    min-width: 200px;
+    font-size: 20px;
+}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<center>
+    <form th:action="@{/owner/PetsitterInfo}" method="post">
+
+        <label class="label">Petsitters in your city:</label><br><br>
+        <select class="citieslist" th:name="options">
+            <option th:each="petsitter : ${petsitters}" th:text="${petsitter.name} + ' '+ ${petsitter.lastname} +', '+ ${petsitter.user_id}"/>
+        </select><br><br>
+
+        <input class="button" type="submit" value="Search">
+
+    </form>
+</center>
+
+</body>
+</html>

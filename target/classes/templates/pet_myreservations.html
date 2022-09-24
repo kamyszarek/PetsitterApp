@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security" xmlns:name="http://www.w3.org/1999/xhtml">
+<html>
+<style>
+textarea {
+  resize: none;
+}
+th.kolumna {
+  min-width: 50px;
+}
+</style>
+
+<head>
+    <title>
+        Example of center and BR tag
+    </title>
+</head>
+
+<body>
+
+
+
+<!--<textarea id="w3review" name="w3review" rows="1" cols="30"> </textarea>-->
+
+<center>
+    <form th:action="@{/HomepageLogged}">
+        <h3>My reservations</h3>
+        <table border="1" cellpadding="2" cellspacing="2">
+            <tr>
+                <th width="150px">From</th>
+                <th width="150px">To</th>
+                <th width="200px">Owner name</th>
+                <th width="300px">Address</th>
+
+
+            </tr>
+
+            <tr th:each="res :${reservations}">
+                <td th:text="${res.from}"></td>
+                <td th:text="${res.until}"></td>
+                <td th:text="${res.owner}"></td>
+                <td th:text="${res.address}"></td>
+            </tr>
+
+        </table>
+
+    </form> <br><br>
+</center>
+
+
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security" xmlns:name="http://www.w3.org/1999/xhtml">
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  background-image:linear-gradient(to right bottom, #e4a7db, #d245db, #a22dce, #7d3ac5, #4d56bd);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topnav {
+  height: 30px;
+  font-size: 26px;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.vertical-menu {
+  width: 200px;
+}
+
+.vertical-menu a {
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+
+.vertical-menu a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.klasa {
+    font-weight: bold;
+    font-size:20px;
+}
+
+</style>
+</head>
+<body>
+
+
+
+<center>
+    <div class="vertical-menu">
+        <a th:href="@{/owner/findPetsitterPage}" sec:authorize="hasAuthority('OWNER')">Find petsitter</a>
+        <a th:href="@{/owner/deleteResPage}" sec:authorize="hasAuthority('OWNER')">Delete reservation</a>
+        <a th:href="@{/pet/myReservations}" sec:authorize="hasAuthority('PETSITTER')">My reservations</a>
+        <a th:href="@{/user/editMyAddressPage}" sec:authorize="hasAnyAuthority('PETSITTER', 'OWNER')">Edit your address</a>
+        <a th:href="@{/user/changePasswordPage}" sec:authorize="hasAnyAuthority('PETSITTER', 'OWNER')">Change password</a>
+        <a th:href="@{/logout}" sec:authorize="hasAnyAuthority('ADMIN', 'OWNER', 'PETSITTER')">Log out</a>
+    </div>
+</center>
+
+
+</body>
+</html>
