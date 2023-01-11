@@ -14,6 +14,6 @@ Open "application.properties" (src->main->java->templates) and optionally change
 spring.datasource.url=jdbc:mysql://127.0.0.1/petsitter?useUnicode=true&characterEncoding=utf-8
 ```
 
-Example data:
+Example data:<br>
 ADMIN: login and password: arek99<br>
 USER: login and password: maria99
