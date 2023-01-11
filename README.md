@@ -15,5 +15,5 @@ spring.datasource.url=jdbc:mysql://127.0.0.1/petsitter?useUnicode=true&character
 ```
 
 Example data:
-ADMIN: login and password: arek99
+ADMIN: login and password: arek99<br>
 USER: login and password: maria99
