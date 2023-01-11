@@ -1,7 +1,7 @@
 # PetsitterApp
 
 ### Description
-This application shows the basic functionalities for managing the authorities, registering new users, and basic operations on the database. It was used Java 11, Spring Boot, MySQL database, and Thymeleaf to communicate with users.
+This application shows the basic functionalities for managing the authorities, reserving terms, and various operations on the database. It was used Java 11, Spring Boot, MySQL database, and Thymeleaf to communicate with users.
 
 ### Prepare environment
 The application was coded in IntelliJ IDEA so it would be great to use that environment to run this project.<br>
@@ -16,4 +16,5 @@ spring.datasource.url=jdbc:mysql://127.0.0.1/petsitter?useUnicode=true&character
 
 Example data:<br>
 ADMIN: login and password: arek99<br>
-USER: login and password: maria99
+PETSITTER: login and password: anna99<br>
+OWNER: login and password: adam99
