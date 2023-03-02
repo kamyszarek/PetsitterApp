@@ -83,7 +83,6 @@ public class ViewController {
     public String getLogging() {return "login";}
 
 
-
     //Registration
     @RequestMapping("/RegisterUserPage")
     public String RegisterUserPage(Model model){

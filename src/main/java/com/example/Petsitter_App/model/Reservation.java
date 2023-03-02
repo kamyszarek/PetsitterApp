@@ -29,7 +29,7 @@ public class Reservation {
 
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "user_id", referencedColumnName = "user_id")
+    @JoinColumn(name = "petsitter_id", referencedColumnName = "user_id")
     private User user;
 
     @OneToOne(cascade = CascadeType.ALL)

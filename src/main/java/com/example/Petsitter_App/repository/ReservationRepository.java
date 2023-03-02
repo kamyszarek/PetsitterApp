@@ -15,13 +15,13 @@ import java.util.List;
 @Repository
 public interface ReservationRepository extends JpaRepository<Reservation, Long> {
 
-    @Query("SELECT u FROM reservation u WHERE user_id = ?1")
+    @Query("SELECT u FROM reservation u WHERE petsitter_id = ?1")
     public List<Reservation> findAllByPetId(User user);
 
     @Query("SELECT u FROM reservation u WHERE owner_id = ?1")
     public List<Reservation> findAllByOwnerId(User user);
 
-    @Query("SELECT u FROM reservation u WHERE user_id = ?1 AND start_date < ?2")
+    @Query("SELECT u FROM reservation u WHERE petsitter_id = ?1 AND start_date < ?2")
     List<Reservation> findAllFutureByOwnerId(User user, @Param("date") Date date);
 
     @Transactional
